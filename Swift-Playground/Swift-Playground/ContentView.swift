@@ -8,61 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        
-        VStack (alignment: .center, spacing: 16) {
-            
-            Image(systemName: "timelapse", variableValue: 0.2)
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-                .font(.system(size: 64))
-                .fontWeight(.thin)
-            
-            Text("Switching Apps".uppercased())
-                .font(.largeTitle.width(.condensed))
-                .fontWeight(.bold)
-            
-            Text("Tap and hold any part of the screen to show menu")
-                .multilineTextAlignment(.center)
-                .foregroundColor(.secondary)
-                .fontWeight(.medium)
-            
-            Button {
-                
-            } label: {
-                Text("Got it")
-                    .padding(.all)
-                    .frame(maxWidth: .infinity)
-                    .background(.white.opacity(0.2).gradient)
-                    .cornerRadius(16)
-                    .background(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke()
-                            .foregroundStyle(.linearGradient(colors: [.white.opacity(0.5    ), .clear, .white.opacity(0.5), .clear], startPoint: .topLeading, endPoint: .bottomTrailing))
-                    )
-                    
-                    
+    @State var showMenu = false
+//    @State var selectedMenu: Menu = .compass
+    @AppStorage("selectedMenu") var selectedMenu: Menu = .compass
+    @GestureState var press = false
+    
+    var longPress: some Gesture {
+        LongPressGesture(minimumDuration: 1)
+            .updating($press) { currenState, gestureState, transaction in
+                gestureState = currenState
             }
-            .accentColor(.primary)
-            .shadow(radius: 10)
-//            .buttonStyle(.borderedProminent)
-//            .controlSize(.large)
-//            .accentColor(.primary)
-
+            .onEnded { value in
+                showMenu = true
+            }
+    }
+    
+    var body: some View {
+        ZStack {
+            Color(.systemBackground).ignoresSafeArea()
+            switch selectedMenu {
+            case .compass:
+                MessageView()
+            case .card:
+                Text("Card")
+            case .charts:
+                Text("Charts")
+            case .radial:
+                Text("Radial")
+            case .halfsheet:
+                MenuView()
+            case .gooey:
+                Text("Gooey")
+            case .actionbutton:
+                Text("Action Button")
+            }
         }
-        .padding(32)
-        .background(.ultraThinMaterial)
-        .cornerRadius(16)
-        .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke()
-                .foregroundStyle(.linearGradient(colors: [.white.opacity(0.5    ), .clear, .white.opacity(0.5), .clear], startPoint: .topLeading, endPoint: .bottomTrailing))
-        )
-        .shadow(color: .black.opacity(0.3), radius: 16, y: 16)
-        .frame(maxWidth: 500)
-        .padding(16)
-        .dynamicTypeSize(.xSmall ... .xxxLarge)
-        
+        .gesture(longPress)
+        .sheet(isPresented: $showMenu) {
+            MenuView()
+                .presentationDetents([.medium, .large])
+        }
     }
 }
 
@@ -70,6 +55,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .background(Image("Wallpaper 2"))
     }
 }
