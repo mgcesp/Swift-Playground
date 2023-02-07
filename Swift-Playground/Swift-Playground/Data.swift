@@ -33,3 +33,39 @@ enum Menu: String {
     case gooey
     case actionbutton
 }
+
+struct Value:Identifiable {
+    var id = UUID()
+    var day: String
+    var value: Double
+}
+
+let data = [
+    Value(day: "Jun 1", value: 200),
+    Value(day: "Jun 2", value: 96),
+    Value(day: "Jun 3", value: 312),
+    Value(day: "Jun 4", value: 256),
+    Value(day: "Jun 5", value: 505),
+    Value(day: "Jun 6", value: 128),
+    Value(day: "Jun 7", value: 240),
+]
+
+let data2 = [
+    Value(day: "Jun 1", value: 151),
+    Value(day: "Jun 2", value: 192),
+    Value(day: "Jun 3", value: 176),
+    Value(day: "Jun 4", value: 158),
+    Value(day: "Jun 5", value: 401),
+    Value(day: "Jun 6", value: 128),
+    Value(day: "Jun 7", value: 240),
+]
+
+let data3 = [
+    Value(day: "Jun 1", value: 222),
+    Value(day: "Jun 2", value: 111),
+    Value(day: "Jun 3", value: 333),
+    Value(day: "Jun 4", value: 444),
+    Value(day: "Jun 5", value: 777),
+    Value(day: "Jun 6", value: 555),
+    Value(day: "Jun 7", value: 666),
+]
