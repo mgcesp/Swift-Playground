@@ -16,6 +16,10 @@
 		5F471F78298F5E9B0056818A /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F471F77298F5E9B0056818A /* MessageView.swift */; };
 		5F471F7A298F763F0056818A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F471F79298F763F0056818A /* MenuView.swift */; };
 		5F471F7C29920A320056818A /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F471F7B29920A320056818A /* ChartView.swift */; };
+		5F471F7E2992E0790056818A /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F471F7D2992E0790056818A /* GridView.swift */; };
+		5F471F802992F14E0056818A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F471F7F2992F14E0056818A /* CardView.swift */; };
+		5F471F82299308220056818A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F471F81299308220056818A /* DetailView.swift */; };
+		5F471F8429930AAD0056818A /* RadialLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F471F8329930AAD0056818A /* RadialLayoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		5F471F77298F5E9B0056818A /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		5F471F79298F763F0056818A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		5F471F7B29920A320056818A /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		5F471F7D2992E0790056818A /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		5F471F7F2992F14E0056818A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		5F471F81299308220056818A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		5F471F8329930AAD0056818A /* RadialLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialLayoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +71,11 @@
 			children = (
 				5F471F63298EF9090056818A /* Swift_PlaygroundApp.swift */,
 				5F471F65298EF9090056818A /* ContentView.swift */,
+				5F471F8329930AAD0056818A /* RadialLayoutView.swift */,
 				5F471F7B29920A320056818A /* ChartView.swift */,
+				5F471F7D2992E0790056818A /* GridView.swift */,
+				5F471F7F2992F14E0056818A /* CardView.swift */,
+				5F471F81299308220056818A /* DetailView.swift */,
 				5F471F79298F763F0056818A /* MenuView.swift */,
 				5F471F77298F5E9B0056818A /* MessageView.swift */,
 				5F471F71298F569C0056818A /* NavigationStackView.swift */,
@@ -153,7 +165,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F471F66298EF9090056818A /* ContentView.swift in Sources */,
+				5F471F802992F14E0056818A /* CardView.swift in Sources */,
 				5F471F7A298F763F0056818A /* MenuView.swift in Sources */,
+				5F471F8429930AAD0056818A /* RadialLayoutView.swift in Sources */,
+				5F471F82299308220056818A /* DetailView.swift in Sources */,
+				5F471F7E2992E0790056818A /* GridView.swift in Sources */,
 				5F471F72298F569C0056818A /* NavigationStackView.swift in Sources */,
 				5F471F7C29920A320056818A /* ChartView.swift in Sources */,
 				5F471F64298EF9090056818A /* Swift_PlaygroundApp.swift in Sources */,

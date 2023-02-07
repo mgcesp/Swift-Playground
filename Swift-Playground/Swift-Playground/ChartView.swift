@@ -11,13 +11,13 @@ import Charts
 struct ChartView: View {
     var body: some View {
         VStack(spacing: 40) {
-            Chart {
-                ForEach(data) { item in
-                    BarMark(x: .value("Day", item.day), y: .value("Value", item.value))
-                        .foregroundStyle(.linearGradient(colors: [.blue,.purple], startPoint: .top, endPoint: .bottom))
-                }
-            }
-            .frame(height: 300)
+//            Chart {
+//                ForEach(data) { item in
+//                    BarMark(x: .value("Day", item.day), y: .value("Value", item.value))
+//                        .foregroundStyle(.linearGradient(colors: [.blue,.purple], startPoint: .top, endPoint: .bottom))
+//                }
+//            }
+//            .frame(height: 300)
             Chart {
                 ForEach(data) { item in
                     LineMark(x: .value("Day", item.day), y: .value("Value", item.value),series: .value("Year", "2023"))
@@ -39,8 +39,8 @@ struct ChartView: View {
                 }
             }
             .frame(height: 300)
+            .padding(20)
         }
-        .padding(40)
     }
 }
 
